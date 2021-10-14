@@ -12,8 +12,8 @@ class ImageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val items = generateTestData()
+        val stringarray = this.resources.getStringArray(R.array.stringArray)
+        val items = generateTestData(stringarray)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         val imageView = findViewById<ImageView>(R.id.imageView)
@@ -30,18 +30,18 @@ class ImageActivity : AppCompatActivity() {
         recyclerView.adapter = ImageAdapter(items, onClickListener)
     }
 
-    fun generateTestData(): Array<Item> {
-        return arrayOf(Item(R.drawable.ccf_original, "Original")
-            , Item(R.drawable.ccf_freshstrawberry,"Fresh Strawberry")
-            , Item(R.drawable.ccf_chocolatecaramelicious,"Chocolate Caramelicious Cheesecake ")
-            , Item(R.drawable.ccf_pineappleupsidedown,"Pineapple Upside-Down")
-            , Item(R.drawable.ccf_celebration,"Celebration")
-            , Item(R.drawable.ccf_caramelapple,"Caramel Apple")
-            , Item(R.drawable.ccf_verycherryghirardellichocolate,"Very Cherry Ghirardelli® Chocolate")
-            , Item(R.drawable.ccf_lowlicious,"Low-Licious")
-            , Item(R.drawable.ccf_cinnaboncinnamoncwirl,"Cinnabon® Cinnamon Swirl")
-            , Item(R.drawable.ccf_godiva,"Godiva® Chocolate")
-            , Item(R.drawable.ccf_coconutcreampie,"Coconut Cream Pie")
-            , Item(R.drawable.ccf_saltedcaramel,"Salted Caramel"))
+    fun generateTestData(stringarray: Array<String>): Array<Item> {
+        return arrayOf(Item(R.drawable.ccf_original, stringarray[2])
+            , Item(R.drawable.ccf_freshstrawberry,stringarray[3])
+            , Item(R.drawable.ccf_chocolatecaramelicious,stringarray[4])
+            , Item(R.drawable.ccf_pineappleupsidedown,stringarray[5])
+            , Item(R.drawable.ccf_celebration,stringarray[6])
+            , Item(R.drawable.ccf_caramelapple,stringarray[7])
+            , Item(R.drawable.ccf_verycherryghirardellichocolate,stringarray[8])
+            , Item(R.drawable.ccf_lowlicious,stringarray[9])
+            , Item(R.drawable.ccf_cinnaboncinnamoncwirl,stringarray[10])
+            , Item(R.drawable.ccf_godiva,stringarray[11])
+            , Item(R.drawable.ccf_coconutcreampie,stringarray[12])
+            , Item(R.drawable.ccf_saltedcaramel,stringarray[13]))
     }
 }
