@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Dessert App</string>
+    <string name="instruction">Click on an image to view</string>
+    <string name="CheesecakeFactory">The Cheesecake Factory</string>
     <string-array name="stringArray">
-        <item>Click on an image to view</item>
-        <item>The Cheesecake Factory</item>
         <item>Original</item>
         <item>Fresh Strawberry</item>
         <item>Chocolate Caramelicious Cheesecake</item>
